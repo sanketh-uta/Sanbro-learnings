@@ -1,0 +1,58 @@
+-->Variable - used to store the values so that they will be stored in computer memory and can always e accessed using the variable name.
+-->Rules for declaring the variables are same as in other programming languages
+-->There are 7 data types in javascript
+    1) string
+    2) number
+    3) boolean
+    4) undefined --> variable declared but value not assigned (value will be undefined and also type will be undefined)
+    5) null --> (type will be object but dont know why its a bug in javascript for legacy reasons)
+    6) symbol
+    7) BigInt
+--->Types of declaring a variable   
+    1)var --> This is the oldest way 
+    2)let --> If there is any reassigning required we will be using this for example if we want to reassign after some computations
+    3)const --> These values cant be changed throughtout
+
+--->String concatenation with calculating values
+    1)Before ES6 
+        const job = 'teacher';
+        const age = 27;
+        console.log("I'm " + age + " years old "+job) //this will print I'm 27 years old teacher
+    this was we need to keep track of using single and double quotes and even finds difficult in using spaces between string so in ES6 introduced string interpolation
+    2)Now ES6 
+        console.log(`I'm ${age} years old ${job}`) //this will also print the same 
+---> Multiline strings
+    IN ES6
+        console.log(`first line
+        second line
+        third line`) //this will print in different lines same as we wrote in the code
+
+--->Type Conversion and coertion
+    1)Type conversion --> explicitly converting
+        string to number ----> if '90' is received as strng from input now if we want to perform operations on that we need to convert to number for that Number('90')
+        example--> let a = '44' to convert to number a= Number(a);
+    2)Type coertion --> implicitly javascript will convert 
+
+    Some confusing examples 
+    1) console.log(1+'1') --> this will print '11'
+    2) console.log('1'+1) --> this will print '11'
+    3) console.log(1+2+3+'4') --> this will print '64'
+    4) console.log('1'+2+3+4) --> this will print '1234'
+
+    Suprisingly if there - * / signs even string will be converted to number implicitly using coertion
+    1)console.log('10' - 5 - 1) ---> this will print 4
+    2)console.log(10-'2'-1) --> this will print 7
+    the same goes with * and / operators also
+
+--->Falsy and truthy values 
+    1)Falsy values --> undefined,NULL,NAN,0,''(EMPTY STRING)
+    2)Truthy values --> remaining all 
+
+---> Equality opearotrs
+    1) == ---> this is loose equality that is type coertion is done and hen it checks
+        example--> '3' == 3 this will be true as the string will be converted to number and then it check
+    2) === --> this is strict
+        example --> '3' === 3 this will be false as the type of the 2 are different
+
+    3) != --> loose not equality
+    4) !== --> strict not equality
